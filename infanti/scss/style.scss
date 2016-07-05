@@ -1,0 +1,395 @@
+@import "_reset.scss";
+@import "_mixin.scss";
+@import "_images.scss";
+
+$imageurl: "../images";
+
+a {
+	color: inherit;
+	text-decoration: none;
+	outline: 0;
+}
+
+body {
+	background-image: url("#{$image-bg}");
+	background-repeat: repeat;
+	background-position: top center;
+	font-family: 'Open Sans';
+	font-size: 100%;
+	color: #000;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: url("#{$imageurl}/header.jpg") top center no-repeat;
+	}
+}
+
+#logo {
+	margin-left: 250px;
+	width: 370px;
+	height: 370px;
+	position: relative;
+	.logo {
+		width: 100%;
+		height: 100%;
+		@include animation('rotate 60s infinite linear');
+		transform-origin: 50% 50%;
+		background: url("#{$imageurl}/circle.png") center center no-repeat;
+	}
+	.imagen {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		@include animation('none');
+		margin-top: -96px;
+		margin-left: -90px;
+		width: auto;
+	}
+}
+
+#logum {
+	background: url("#{$imageurl}/logum-nube.png") 0 0 no-repeat;
+	width: 387px;
+	height: 125px;
+	text-align: center;
+	padding-top: 10px;
+}
+
+#menu {
+	position: fixed;
+	top: 13%;
+	z-index: 1;
+	width: 100%;
+	.logo .item {
+		display: none;
+		&:first-child {
+			display: block;
+		}
+	}
+	ul {
+		margin-top: 25px;
+		li {
+			margin-bottom: 10px;
+			background: url("#{$imageurl}/menu.png") 0 0 no-repeat;
+			height: 34px;
+			width: 150px;
+			display: block;
+			text-indent: -99999em;
+			cursor: pointer;
+			padding-left: 53px;
+			padding-top: 48px;
+			&.coches {
+				background-position: 0 0;
+				&.active,
+				&:hover {
+					background-position: right 0;
+				}
+			}
+			&.cunas {
+				background-position: 0 -58px;
+				&.active,
+				&:hover {
+					background-position: right -58px;
+				}
+			}
+			&.auto {
+				background-position: 0 -113px;
+				&.active,
+				&:hover {
+					background-position: right -113px;
+				}
+			}
+			&.comer {
+				background-position: 0 -172px;
+				&.active,
+				&:hover {
+					background-position: right -172px;
+				}
+			}
+			&.accesorios {
+				background-position: 0 -230px;
+				&.active,
+				&:hover {
+					background-position: right -230px;
+				}
+			}
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			top: 109px;
+			left: 45px;
+			width: 3px;
+			height: 260px;
+			background-image: url('#{$image-line}');
+			background-repeat: no-repeat;
+			background-position: 0 0;
+			z-index: -1;
+		}
+	}
+}
+
+#home .icon {
+	position: absolute;
+	left: 0;
+	top: 0;
+	line-height: 0;
+	@include animation('fadeInOut 4s infinite');
+	&.item-1 {
+		animation-duration: 4s;
+		left: auto;
+		right: 10px;
+		top: 10px;
+	}
+	&.item-2 {
+		animation-duration: 6s;
+		bottom: 20px;
+		left: -20px;
+		top: auto;
+	}
+	&.item-3 {
+		left: auto;
+		right: 390px;
+		top: 100px;
+		animation-duration: 8s;
+	}
+	&.item-4 {
+		left: auto;
+		right: 85px;
+		top: 85px;
+		animation-duration: 10s;
+	}
+}
+
+#home.page {
+	padding: 0;
+}
+
+.page {
+	min-height: 620px;
+	padding-top: 50px;
+	&.alt {
+		min-height: 690px;
+		padding-top: 100px;
+	}
+}
+
+.width {
+	width: 1160px;
+	margin: auto;
+	position: relative;
+}
+
+.content {
+	float: right;
+	width: 500px;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+	.wrapper {
+		padding-right: 110px;
+		.vamos {
+			animation-duration: 2s;
+		}
+		.description {
+			color: #8d8d8d;
+			margin: 15px 0;
+		}
+		.more {
+			font-size: 11px;
+			margin-bottom: 35px;
+			text-transform: uppercase;
+			a {
+				background: #f7b4bc;
+				color: white;
+				padding: 6px 13px;
+				border-radius: 3px;
+				font-weight: 600;
+				&:hover {
+					background-color: #e0263a;
+				}
+			}
+		}
+		.product {
+			background-image: url('#{$image-product}');
+			background-repeat: no-repeat;
+			background-position: 0 0;
+			width: 266px;
+			height: 199px;
+			padding-left: 27px;
+			padding-top: 13px;
+			margin: auto;
+			span {
+				display: block;
+				line-height: 1.15;
+			}
+			.title {
+				font-size: 18px;
+				font-weight: 700;
+			}
+			.info {
+				font-size: 15px;
+			}
+			.antes {
+				font-size: 13px;
+			}
+			.oferta {
+				font-size: 18px;
+				text-decoration: underline;
+				color: #e02139;
+				font-weight: 600;
+				text-transform: uppercase;
+			}
+			.precio {
+				font-size: 34px;
+				color: #e02139;
+				font-weight: 600;
+				margin-bottom: 8px;
+				span {
+					font-size: 24px;
+					display: inline-block;
+					font-weight: 600;
+				}
+			}
+			.buy {
+				font-size: 11px;
+				text-transform: uppercase;
+				margin-top: 5px;
+				a {
+					background: #E0263A;
+					color: white;
+					padding: 5px 10px;
+					border-radius: 3px;
+					font-weight: 700;
+					&:hover {
+						background: black;
+						color: white;
+					}
+				}
+			}
+		}
+	}
+}
+
+.imagen {
+	position: absolute;
+	left: 180px;
+	top: 0;
+	@include animation('2.5s ease 0s normal none infinite running fadeUpDown');
+}
+
+[data-content] {
+	@include data("cunas") {
+		background: url("#{$imageurl}/nube.png") top center repeat-x;
+		@include animation('100s linear 0s normal none infinite running backgroundLeft');
+	}
+}
+
+#top {
+	a {
+		display: none;
+		width: 50px;
+		height: 50px;
+		background-image: url('#{$image-top}');
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		text-indent: -9999em;
+		text-decoration: none;
+		position: fixed;
+		bottom: 25px;
+		right: 25px;
+		z-index: 999;
+	}
+}
+
+#container {
+	padding-bottom: 35px;
+}
+
+#responsive {
+	height: 51px;
+	background: rgba(255, 255, 255, 0.9);
+	/*    transition: all 0.25s linear 0s; */
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	display: none;
+	&.active {
+		height: 100%;
+		background: white;
+	}
+	.menu {
+		background: white;
+		display: none;
+		overflow: auto;
+		height: 100vh;
+		li {
+			height: 50px;
+			line-height: 50px;
+			border-top: 1px solid #bbb;
+			color: black;
+			text-transform: uppercase;
+			padding: 0 15px;
+			font-weight: 600;
+			cursor: pointer;
+		}
+	}
+	.logo {
+		box-shadow: 0 0 5px #aaa;
+		padding: 8px 0;
+		position: relative;
+		text-align: center;
+		z-index: 1;
+		img {
+			display: block;
+			height: 35px;
+			margin: auto;
+		}
+	}
+	.open {
+		span {
+			background-image: url('#{$image-menu}');
+			background-position: left top;
+			background-repeat: no-repeat;
+			height: 40px;
+			position: absolute;
+			right: 5px;
+			top: 5px;
+			cursor: pointer;
+			width: 40px;
+			display: block;
+			z-index: 2;
+			&.active {
+				background-position: right top;
+			}
+		}
+	}
+}
+
+.animated {
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	.infinite {
+	  animation-iteration-count: infinite;
+	}
+	.hinge {
+	  animation-duration: 2s;
+	}
+}
+
+.fadeInLeft {
+	animation-name: fadeInLeft;
+}
+
+.fadeInRight {
+	animation-name: fadeInRight;
+}
+
+@import "_keyframes.scss";
+@import "_responsive.scss";

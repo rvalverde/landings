@@ -1,0 +1,79 @@
+@media screen and (max-width: 1160px) {
+	.width {
+		padding-left: 15px;
+		padding-right: 15px;
+		width: auto;
+	}
+
+	#responsive {
+		display: block;
+	}
+
+	#logum, #menu {
+		display: none;
+	}
+
+	#logo {
+		margin: auto;
+		position: relative;
+		right: auto;
+		text-align: center;
+		top: auto;
+		top: 130px;
+	}
+
+	.content {
+		float: none;
+		margin: auto;
+		.wrapper {
+			padding-right: 0;
+		}
+	}
+
+	.imagen {
+		position: relative;
+		text-align: center;
+		width: 100%;
+		top: auto;
+		left: auto;
+	} 
+
+	[data-content="cunas"], [data-content="comer"] {
+		background-size: cover;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	img {
+		display: block;
+		height: auto;
+		margin: auto;
+		max-width: 100%;
+	}
+}
+
+@media screen and (max-width: 680px) {
+	body {
+		background-position: top right;
+		overflow-x: hidden;
+	}
+
+	#logo {
+		top: auto;
+		margin-top: 130px;
+		margin-bottom: 15px;
+	}
+
+	.imagen {
+		animation: 0;
+	}
+
+	.content {
+		width: auto;
+		text-align: center;
+	}
+
+	#home.page {
+		overflow: hidden;
+	}
+}
