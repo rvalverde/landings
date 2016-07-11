@@ -1,0 +1,243 @@
+@import "_reset.scss";
+@import "_mixin.scss";
+@import "_images.scss";
+
+$imageurl: "../images";
+
+body {
+	font-family: 'Open Sans';
+}
+
+.width {
+	width: 1200px;
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+}
+
+#more {
+	padding: 40px 0 30px;
+	position: relative;
+	text-align: center;
+	z-index: 1;
+	a {
+		display: inline-block;
+		color: black;
+		background: #FFC801;
+		padding: 15px 35px;
+		border-radius: 6px;
+		font-weight: 700;
+		text-transform: uppercase;
+		transition: background 0.2s linear;
+		&:hover {
+			background-color: black;
+			color: white;
+		}
+	}
+}
+
+#container {
+	min-height: 1460px;
+	background: url("#{$imageurl}/bg.jpg") top center repeat-y;
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-left: -565px;
+		width: 1130px;
+		background: #F6F6F6;
+		height: 100%;
+	}
+}
+
+#products {
+	padding-bottom: 48px;
+	position: relative;
+	.group {
+		position: relative;
+		margin-top: -20px;
+	}
+	.item {
+		margin: 25px 0;
+		position: relative;
+		z-index: 2;
+		display: inline-block;
+		line-height: 0;
+		a {
+			display: block;
+			height: 100%;
+			position: relative;
+			border: 8px solid white;
+			box-shadow: 18px 18px 0 rgba(0, 0, 0, 0.1);
+			&:before {
+				position: absolute;
+				top: 0;
+				left: 0;
+				content: "";
+				background-position: bottom left;
+				background-repeat: no-repeat;
+				z-index: 1;
+				width: 100%;
+				height: 100%;
+				-webkit-transition: background 0.5s linear;
+				-moz-transition: background 0.5s linear;
+				-ms-transition: background 0.5s linear;
+				-o-transition: background 0.5s linear;
+				transition: background 0.5s linear;
+			}
+			&:hover:before {
+				background-color: rgba(0, 0, 0, 0.4);
+			}
+		}
+		&.alt a {
+			box-shadow: -18px 18px 0 rgba(221, 221, 221, 0.5);
+		}
+		&.number-1 a:before {
+			background-image: url("#{$imageurl}/products/1.png");
+		}
+		&.number-2 a:before {
+			background-image: url("#{$imageurl}/products/2.png");
+		}
+		&.number-3 a:before {
+			background-image: url("#{$imageurl}/products/3.png");
+		}
+		&.number-4 a:before {
+			background-image: url("#{$imageurl}/products/4.png");
+		}
+		&:nth-child(even) {
+			position: absolute;
+			top: 55px;
+			right: 0;
+			margin-left: 0;
+			z-index: 1;
+		}
+	}
+}
+
+#header {
+	margin-bottom: -48px;
+	position: relative;
+	z-index: 1;
+	.info {
+		float: left;
+		padding-top: 110px;
+		text-align: center;
+		width: 47%;
+	}
+	.slider {
+		float: right;
+		.pager {
+			bottom: 110px;
+		}
+	}
+}
+
+#bottom {
+	text-align: center;
+	.slider {
+		display: inline-block;
+		border: 8px solid white;
+		padding: 0;
+		box-shadow: 18px 18px 0 rgba(0, 0, 0, 0.1);
+	}
+	.item {
+		&:before {
+			position: absolute;
+			top: 0;
+			right: 0;
+			background-position: right 5px;
+			background-repeat: no-repeat;
+			content: "";
+			z-index: 1;
+			width: 100%;
+			height: 100%;
+		}
+		&.number-1:before {
+			background-image: url("#{$imageurl}/stickers/1.png");
+		}
+		&.number-2:before {
+			background-image: url("#{$imageurl}/stickers/2.png");
+		}
+		&.number-3:before {
+			background-image: url("#{$imageurl}/stickers/3.png");
+		}
+	}
+}
+
+.slider {
+	position: relative;
+	padding-bottom: 18px;
+	background-color: #fffffff;
+	.tag {
+		position: absolute;
+		top: 20px;
+		right: 0;
+		background: white;
+		padding: 15px 25px;
+		color: black;
+		text-align: center;
+		z-index: 999;
+		span {
+			display: block;
+			font-size: 20px;
+			font-weight: 700;
+			&.small {
+				font-size: 14px;
+				font-weight: 400;
+			}
+		}
+	}
+	.item {
+		display: none;
+		line-height: 0;
+		&:first-child {
+			display: block;
+		}
+		a {
+			display: block;
+			height: 100%;
+			position: relative;
+			border: 8px solid white;
+			border-top: none;
+			box-shadow: -18px 18px 0 rgba(0, 0, 0, 0.1);
+		}
+	}
+	.pager {
+		position: absolute;
+		right: 25px;
+		bottom: 15px;
+		z-index: 999;
+		span {
+			display: inline-block;
+			color: white;
+			font-weight: 700;
+			border-bottom: 4px solid white;
+			margin-left: 10px;
+			padding: 0 6px 3px 6px;
+			cursor: pointer;
+			&.cycle-pager-active {
+				border-color: #fed103;
+			}
+		}
+	}
+}
+
+#top {
+	a {
+		display: none;
+		width: 64px;
+		height: 64px;
+		background: url("#{$image-top}") 0 0 no-repeat;
+		text-indent: -9999em;
+		text-decoration: none;
+		position: fixed;
+		bottom: 25px;
+		right: 25px;
+		z-index: 9999;
+	}
+}
+
+@import "_keyframes.scss";
+@import "_responsive.scss";
