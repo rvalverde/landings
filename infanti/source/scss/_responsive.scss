@@ -9,7 +9,8 @@
 		display: block;
 	}
 
-	#logum, #menu {
+	#logum,
+	#menu {
 		display: none;
 	}
 
@@ -65,7 +66,7 @@
 	}
 
 	.imagen {
-		animation: 0;
+		@include animation('0');
 	}
 
 	.content {

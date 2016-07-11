@@ -1,5 +1,5 @@
-@import "_reset.scss";
 @import "_mixin.scss";
+@import "_reset.scss";
 @import "_images.scss";
 
 $imageurl: "../images";
@@ -15,8 +15,6 @@ body {
 	background-repeat: repeat;
 	background-position: top center;
 	font-family: 'Open Sans';
-	font-size: 100%;
-	color: #000;
 	&:before {
 		content: "";
 		position: absolute;
@@ -26,6 +24,10 @@ body {
 		height: 100%;
 		background: url("#{$imageurl}/header.jpg") top center no-repeat;
 	}
+}
+
+.clearfix {
+	@include clearfix();
 }
 
 .width {
@@ -313,7 +315,7 @@ body {
 #responsive {
 	height: 51px;
 	background: rgba(255, 255, 255, 0.9);
-	/*    transition: all 0.25s linear 0s; */
+	//transition: all 0.25s linear 0s;
 	width: 100%;
 	position: fixed;
 	top: 0;
@@ -341,7 +343,7 @@ body {
 		}
 	}
 	.logo {
-		box-shadow: 0 0 5px #aaa;
+		@include box-shadow(0, 0, 5px, #aaa);
 		padding: 8px 0;
 		position: relative;
 		text-align: center;

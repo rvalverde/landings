@@ -1,11 +1,15 @@
-@import "_reset.scss";
 @import "_mixin.scss";
+@import "_reset.scss";
 @import "_images.scss";
 
 $imageurl: "../images";
 
 body {
 	font-family: 'Open Sans';
+}
+
+.clearfix {
+	@include clearfix();
 }
 
 .width {
@@ -25,10 +29,10 @@ body {
 		color: black;
 		background: #FFC801;
 		padding: 15px 35px;
-		border-radius: 6px;
 		font-weight: 700;
 		text-transform: uppercase;
-		transition: background 0.2s linear;
+		@include border-radius(6px);
+		@include transition(background 0.2s linear);
 		&:hover {
 			background-color: black;
 			color: white;
@@ -70,7 +74,7 @@ body {
 			height: 100%;
 			position: relative;
 			border: 8px solid white;
-			box-shadow: 18px 18px 0 rgba(0, 0, 0, 0.1);
+			@include box-shadow(18px, 18px, 0, rgba(0, 0, 0, 0.1));
 			&:before {
 				position: absolute;
 				top: 0;
@@ -81,18 +85,14 @@ body {
 				z-index: 1;
 				width: 100%;
 				height: 100%;
-				-webkit-transition: background 0.5s linear;
-				-moz-transition: background 0.5s linear;
-				-ms-transition: background 0.5s linear;
-				-o-transition: background 0.5s linear;
-				transition: background 0.5s linear;
+				@include transition(background 0.5s linear);
 			}
 			&:hover:before {
 				background-color: rgba(0, 0, 0, 0.4);
 			}
 		}
 		&.alt a {
-			box-shadow: -18px 18px 0 rgba(221, 221, 221, 0.5);
+			@include box-shadow(-18px, 18px, 0, rgba(221, 221, 221, 0.5));
 		}
 		&.number-1 a:before {
 			background-image: url("#{$imageurl}/products/1.png");
@@ -140,7 +140,7 @@ body {
 		display: inline-block;
 		border: 8px solid white;
 		padding: 0;
-		box-shadow: 18px 18px 0 rgba(0, 0, 0, 0.1);
+		@include box-shadow(18px, 18px, 0, rgba(0, 0, 0, 0.1));
 	}
 	.item {
 		&:before {
@@ -201,7 +201,7 @@ body {
 			position: relative;
 			border: 8px solid white;
 			border-top: none;
-			box-shadow: -18px 18px 0 rgba(0, 0, 0, 0.1);
+			@include box-shadow(-18px, 18px, 0, rgba(0, 0, 0, 0.1));
 		}
 	}
 	.pager {
