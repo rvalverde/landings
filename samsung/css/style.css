@@ -1,0 +1,804 @@
+@font-face {
+	font-family: 'Samsung-Interface-Regular';
+	src: url('../fonts/samsungif_regular-webfont.eot');
+	src: url('../fonts/samsungif_regular-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/samsungif_regular-webfont.woff2') format('woff2'),
+		 url('../fonts/samsungif_regular-webfont.woff') format('woff'),
+		 url('../fonts/samsungif_regular-webfont.ttf') format('truetype'),
+		 url('../fonts/samsungif_regular-webfont.svg#Samsung-Interface-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Samsung-Interface-Bold';
+	src: url('../fonts/samsungif-bold-webfont.eot');
+	src: url('../fonts/samsungif-bold-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/samsungif-bold-webfont.woff2') format('woff2'),
+		 url('../fonts/samsungif-bold-webfont.woff') format('woff'),
+		 url('../fonts/samsungif-bold-webfont.ttf') format('truetype'),
+		 url('../fonts/samsungif-bold-webfont.svg#Samsung-Interface-Bold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 13px;
+	color:  #595959;
+	overflow-x: hidden;
+}
+
+.width {
+	margin:0 auto;
+	position:relative;
+	width: 960px;
+}
+
+#header {
+	margin-bottom: 20px;
+	position: relative;
+	width: 100%;
+	z-index: 2;
+}
+
+#header.fix {
+	margin-bottom: 145px;
+}
+
+.hr {
+	background: url('../images/footer.jpg') bottom left repeat-x;
+	height: 31px;
+	border: 0;
+	clear: both;
+	overflow: hidden;
+	width: 100%;
+	margin-bottom: 35px;
+}
+
+#footer {
+	clear: both;
+	overflow: hidden;
+}
+
+#footer > div {
+  padding: 25px 0;
+  text-align: center;
+}
+
+#supertop {
+	height: 103px;
+}
+
+#top {
+	border-bottom: 2px solid black;
+	height: 55px;
+	position: relative;
+	z-index: 9999;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+}
+
+#logo a.fixed {
+	background-color: white;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.75);
+	display: block;
+	left: 0;
+	padding: 10px 0;
+	position: fixed;
+	text-align: center;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+	*height: 31px;
+}
+
+#logo a.fixed img {
+	margin: 0 auto;
+	width: 100px;
+}
+
+#top ul {
+	right: 0;
+	position: absolute;
+	top: 20px;
+}
+
+#top ul li {
+	line-height: 2;
+}
+
+ul.format li {
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:9px;
+	float:left;
+	margin-left: 9px;
+	padding-left:9px;
+	*margin-left: 6px;
+	*padding-left:6px;
+	text-transform:uppercase;
+    border-left:1px solid #ccc
+}
+
+ul.format li:first-child {
+    margin-left:0;
+    padding-left:0;
+    border-left:none
+}
+
+ul.format li a {
+    color:#000;
+}
+
+#nav select {
+	background: black;
+	color: white;
+	padding: 5px 10px;
+	border: none;
+	border-radius: 0;
+	margin: 15px 0;
+}
+
+#menu .tabs-menu {display:block}
+#menu select {display:none;}
+
+#navigation {
+	background: #3C3C3C;
+	overflow: hidden;
+	clear: both;
+	text-align: center;
+}
+
+#navigation.fix {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+	box-shadow: 0 0 5px black;
+}
+
+#navigation ul li {
+	display: inline-block;
+	font-size: 18px;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+#navigation ul li:first-child a {
+	border-left: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+#navigation ul li a {
+	border-left: 2px solid white;
+	color: white;
+	font-weight: 700;
+	margin: 15px 0 15px 25px;
+	padding-left: 25px;
+	display: block;
+}
+
+#samsung {
+	font-family: 'Samsung-Interface-Regular', sans-serif;
+	font-size: 18px;
+}
+
+#samsung h1 {
+	margin: 0;
+}
+
+#samsung h2 {
+	font-family: 'Samsung-Interface-Bold';
+	font-weight: normal;
+	font-size: 42px;
+	margin: 0;
+}
+
+#samsung h3 {
+	font-family: 'Samsung-Interface-Bold';
+	font-weight: normal;
+	font-size: 20px;
+	margin: 0;
+}
+
+#samsung .content {
+	padding: 50px 0;
+	width: 60%;
+	z-index: 1;
+	position: relative;
+}
+
+#colors .content {
+	padding-top: 25px;
+	width: 50%;
+	float: left;
+}
+
+#colors .circles {
+	float: left;
+	padding-top: 60px;
+}
+
+#watch .content {
+	width: 45%;
+}
+
+#samsung .buy {
+	display: block;
+}
+
+#samsung .buy a {
+  background-color: red;
+  color: white;
+  padding: 15px 35px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+#samsung .buy.small a {
+  background-color: black;
+  color: white;
+  padding: 15px 35px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+#samsung .normal {
+	text-decoration: line-through;
+	font-size: 34px;
+}
+
+#samsung .price {
+	font-size: 64px;
+	color: #df2039;
+	display: block;
+}
+
+#samsung .price span {
+	font-family: 'Samsung-Interface-Bold';
+	font-size: 92px;
+	display: inline;
+}
+
+#gear {
+	background: url("../images/bg.jpg") top center repeat;
+	color: black;
+}
+
+#samsung .image {
+	position: absolute;
+	top: 25px;
+	right: 0;
+}
+
+#gear ul li {
+	font-size: 30px;
+}
+
+#gear ul li strong {
+	font-family: 'Samsung-Interface-Bold';
+	font-weight: normal;
+}
+
+#colors {
+	background: url("../images/bg-gray.jpg") top center repeat;
+	min-height: 740px;
+	color: white;
+	padding-top: 20px;
+}
+
+#colors .image {
+	top: 210px;
+	right: -180px;
+}
+
+#watch {
+	background: url("../images/bg.jpg") top center repeat;
+	color: black;
+	min-height: 620px;
+}
+
+.page {
+	position: relative;
+	overflow: hidden;
+	clear: both;
+}
+
+#colors .subpage  {height: 710px;}
+#notify .subpage  {height: 720px;}
+#watch .subpage {height: 610px;}
+
+.page > .width {
+	
+}
+
+#watch .image {
+	right: -100px;
+}
+
+#notify {
+	background: url("../images/bg-blue.jpg") top center repeat;
+	min-height: 750px;
+	color: white;
+}
+
+#notify .image {
+	right: -100px;
+}
+
+#featured {
+	background: #E8E8E8;
+	font-size: 13px;
+}
+
+#featured .width {
+	height: 300px;
+	clear: both;
+}
+
+#featured .item {
+	background: url("../images/line-bg-alt.jpg") top center repeat-y;
+}
+
+#featured .item.alt {
+	background: url("../images/line-bg.jpg") top center repeat-y;
+}
+
+#featured .item .content {
+	width: 55%;
+	padding: 30px 20px;
+	position: relative;
+	z-index: 1;
+}
+
+#featured .float-left,
+#featured .float-right {
+	position: relative;
+	width: 49.5%;
+	min-height: 300px;
+}
+
+#featured .item .thumb {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+#featured #featured-1 p {
+	width: 60%;
+}
+
+#featured #featured-2 p {
+	width: 75%;
+}
+
+#featured #featured-3 p {
+	width: 70%;
+}
+
+#featured #featured-4 p {
+	width: 70%;
+}
+
+#featured .float-right .thumb {
+	right: -35px;
+}
+
+#featured .item .float-left {color: black}
+#featured .item .float-right {color: white}
+
+#featured .item.alt .float-left {float: right; color: black}
+#featured .item.alt .float-right {float: left; color: white}
+
+#featured .item.alt .float-right .thumb {
+	right: 0;
+}
+
+#featured .item.alt .float-left .thumb {
+	right: -35px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 989px) {
+	.width {
+		width: 748px;
+	}
+	
+	body {overflow-x: auto}
+	
+	ul.format li {
+		font-size: 8px;
+		margin-left: 4px;
+		padding-left: 4px;
+	}
+	
+	#menu ul li {
+		font-size: 12px;
+	}
+
+	#menu ul li a {
+		padding-left: 7px;
+		padding-right: 7px;
+	}
+	
+	#navigation ul li {
+		font-size: 14px;
+	}
+	
+	#samsung {
+		font-size: 14px;
+	}
+	
+	#samsung h2 {
+		font-size: 32px;
+	}
+	
+	#gear .image {
+		width: 55%;
+	}
+	
+	#gear .image img {
+		display: block;
+		width: 100%;
+	}
+	
+	#gear .content {
+		padding: 25px 0;
+	}
+	
+	#gear h1 {
+		width: 60%;
+	}
+	
+	#gear h1 img {
+		display: block;
+		width: 100%;
+	}
+	
+	#gear .normal,
+	#gear ul li {
+		font-size: 24px;
+	}
+	
+	#gear .price {
+		font-size: 50px;
+	}
+
+	#gear .price span {
+		font-size: 70px;
+	}
+	
+	#watch .content {width: auto}
+	
+	#watch .content p {
+		width: 39%;
+	}
+	
+	#featured .item.alt,
+	#featured .item {
+		background: none;
+	}
+	
+	#featured .width {
+		width: auto;
+		height: auto;
+	}
+	
+	#featured .item .content {
+		padding: 0 0 0 80px;
+		width: 45%;
+		float: left;
+	}
+	
+	#featured .item .thumb {
+		float: left;
+		position: static;
+		bottom: auto;
+		right: auto;
+	}
+	
+	#featured .item.alt .float-right .thumb {
+		right: auto;
+	}
+	
+	#featured .item.alt .float-left,
+	#featured .item.alt .float-right,
+	#featured .float-right,
+	#featured .float-left {
+		width: auto;
+		background: none;
+		float: none;
+		min-height: inherit;
+	}
+	
+	#featured .block {
+		width: 748px;
+		margin: 0 auto;
+		position: relative;
+		min-height: 300px;
+		padding-top: 50px;
+	}
+	
+	#featured #featured-1,
+	#featured #featured-3 {
+		background: url("../images/bg.jpg") top center repeat;
+	}
+	
+	#featured #featured-2,
+	#featured #featured-4 {
+		background: #60636A;
+	}
+	
+	#featured p {
+		width: auto !important;
+	}
+	
+	#colors {
+		min-height: inherit;
+		padding-bottom: 25px;
+	}
+	
+	#colors .image {
+		position: static;
+		top: auto;
+		bottom: auto;
+		left: auto;
+		right: auto;
+		clear: both;
+	}
+	
+	#watch {min-height: 390px}
+	#notify {min-height: 400px}
+	
+	#notify .image img,
+	#watch .image img,
+	#colors .image img {
+		display: block;
+		width: 100%;
+	}
+	
+	#notify .image,
+	#watch .image {
+		right: 0;
+		width: 60%;
+	}
+	
+	#colors .subpage {
+		height: 550px;
+	}
+	
+	#watch .subpage {
+		height: 390px;
+	}
+	
+	#notify .subpage {
+		height: 420px;
+	}
+	
+}
+
+@media only screen and (max-width: 767px) {
+	.width {
+		width: 420px;
+	}
+	
+	body {overflow-x: auto}
+	
+	#top ul, #menu .tabs-menu {display:none}
+    #menu select {display:block}
+	
+	#mobile {
+		display: block;
+	}
+	
+	#header {
+		height: auto;
+		background: none;
+		padding: 0;
+		margin: 0;
+	}
+	
+	#menu {
+		background: rgba(0, 0, 0, 0);
+		height: auto;
+		padding: 0;
+		position: relative !important;
+		top: 20px !important;
+	}
+	
+	#menu select {
+		background: black;
+		color: white;
+		border: none;
+		padding: 5px 10px;
+		border-radius: 0;
+	}
+	
+	#top {
+		border-bottom: none;
+		height: auto;
+	}
+	
+	#featured .item.alt,
+	#featured .item {
+		background: none;
+	}
+	
+	#featured .width {
+		width: auto;
+		height: auto;
+	}
+	
+	#featured .item .content {
+		float: none;
+		margin: 0 auto;
+		padding: 0;
+		width: 80%;
+	}
+	
+	#featured .item .thumb {
+		float: none;
+		position: static;
+		bottom: auto;
+		right: auto;
+	}
+	
+	#featured .item.alt .float-right .thumb {
+		right: auto;
+	}
+	
+	#featured .item.alt .float-left,
+	#featured .item.alt .float-right,
+	#featured .float-right,
+	#featured .float-left {
+		width: auto;
+		background: none;
+		float: none;
+		min-height: inherit;
+		text-align: center;
+	}
+	
+	#featured .block {
+		width: 420px;
+		margin: 0 auto;
+		position: relative;
+		min-height: 300px;
+		padding: 25px 0;
+	}
+	
+	#featured #featured-1,
+	#featured #featured-3 {
+		background: url("../images/bg.jpg") top center repeat;
+	}
+	
+	#featured #featured-2,
+	#featured #featured-4 {
+		background: #60636A;
+	}
+	
+	#featured p {
+		width: auto !important;
+	}
+	
+	#samsung .content {
+		width: auto;
+		float: none;
+		padding: 25px 0;
+		text-align: center;
+	}
+	
+	#samsung .buy a {
+		margin: 0 auto;
+	}
+	
+	#samsung .normal {font-size: 22px}
+	#samsung h2 {font-size: 22px}
+	#gear ul {margin-top: 10px}
+	#gear ul li {font-size: 22px}
+	#samsung .price {font-size: 34px}
+	#samsung .price span {font-size: 68px}
+	
+	#samsung .image {
+		position: static;
+		top: auto;
+		right: auto;
+	}
+	
+	#colors .circles img,
+	#samsung .image img {
+		display: block;
+		width: 100%;
+	}
+	
+	#samsung h1 img {
+		display: block;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+	
+	#colors,
+	#watch,
+	#notify {
+		min-height: inherit;
+		padding-bottom: 25px;
+	}
+	
+	#colors .circles {
+		float: none;
+		padding: 0;
+		text-align: center;
+	}
+	
+	#colors .circles {
+		margin: 0 auto 25px;
+		width: 55%;
+	}
+	
+	#navigation.fix {
+		position: static;
+		top: auto;
+		width: 100%;
+		z-index: 999;
+		box-shadow: none;
+	}
+	
+	#navigation {
+		padding: 10px 0;
+	}
+	
+	#navigation ul li {
+		display: block;
+	}
+	
+	#navigation ul li a {
+		padding: 10px 0;
+		margin: 0;
+		border: none;
+	}
+	
+	#logo a.fixed {
+		position: static !important;
+	}
+	
+	#supertop {
+		height: auto;
+	}
+	
+	#gear .width {
+		top: auto !important;
+	}
+	
+	#colors .subpage,
+	#watch .subpage,
+	#notify .subpage {
+		height: auto;
+	}
+	
+}
+
+@media only screen and (max-width: 479px) {
+	.width {
+		width: 290px;
+	}
+	
+	#featured .width {
+		width: auto;
+		height: auto;
+	}
+	
+	#featured .block {
+		width: 290px;
+	}
+	
+	#featured .item .thumb img {
+		max-width: 100%;
+		display: block;
+	}
+}
